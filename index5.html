@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // if ($.browser.mozilla) {
+        //     alert(' Вы используете браузер Mozilla Firefox ')
+        // } if ($.browser.chrome) {
+        //     alert('Вы используете браузер Chrome')
+        // }
+        // if ($.browser.safari) {
+        //     alert('Вы используете браузер Safari')
+        // } if ($.browser.opera) {
+        //     alert('Вы используете браузер Opera')
+        // }
+        // if ($.browser.mozilla && $.browser.chrome && $.browser.safari && $.browser.opera) {
+        //     alert('Ваш браузер поддерживается!')
+        // }
+        // else {
+        //     alert('Будем надеятся что и у вас всё будет работать)')
+        // }
+        function get_name_browser() {
+            // получаем данные userAgent
+            var ua = navigator.userAgent;
+            // с помощью регулярок проверяем наличие текста,
+            // соответствующие тому или иному браузер
+            if (ua.search(/Chrome/) > 0) {
+                alert(' Вы используете браузер Google Chrome ')
+            } else if (ua.search(/Firefox/) > 0) {
+                alert(' Вы используете браузер Mozilla Firefox ')
+            } else if (ua.search(/Opera/) > 0) {
+                alert(' Вы используете браузер Opera ')
+            } else if (ua.search(/Safari/) > 0) { alert(' Вы используете браузер Safari ') 
+        } else if (ua.search(/MSIE/) > 0) { alert(' Сочувствую, у вас Internet Explorer, держитесь! ') 
+    // условий может быть и больше.
+    // сейчас сделаны проверки только
+    // для популярных браузеров
+    } else  { return 'Не определен' };
+}
+
+        // пример использования
+        var browser = get_name_browser();
+       
+
+    </script>
+
+</body>
+
+</html>
